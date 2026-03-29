@@ -1,8 +1,12 @@
-name: PearMedia
+name: Deploy to GH Pages
 
 on:
   push:
-    branches: [main] # Change to 'master' if needed
+    branches: [main]
+
+# ADD THIS SECTION HERE
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -26,4 +30,4 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # Most React apps build to 'build'
+          folder: build
