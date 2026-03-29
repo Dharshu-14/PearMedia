@@ -1,0 +1,29 @@
+name: PearMedia
+
+on:
+  push:
+    branches: [main] # Change to 'master' if needed
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+      
+      - name: Build with Keys
+        run: npm run build
+        env:
+          REACT_APP_OPENAI_KEY: ${{ secrets.REACT_APP_OPENAI_KEY }}
+          REACT_APP_GEMINI_KEY: ${{ secrets.REACT_APP_GEMINI_KEY }}
+          REACT_APP_HF_KEY: ${{ secrets.REACT_APP_HF_KEY }}
+          REACT_APP_COHERE_KEY: ${{ secrets.REACT_APP_COHERE_KEY }}
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # Most React apps build to 'build'
