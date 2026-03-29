@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+Pear Media AI Prototype 
+A responsive web application that bridges the gap between simple user inputs and advanced AI outputs. This prototype integrates multiple AI models to perform professional-grade text enhancement, image generation, and visual analysis.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ Key Features
+ 1. Creative Studio (Text-to-Image Workflow) NLP Enhancement: Automatically transforms simple user ideas into descriptive, 50-word   "masterpiece" prompts using the Cohere Command R7B model.
+ 
+Human-in-the-Loop: Users can review and edit the enhanced prompt before final generation.
+ 
+High-Fidelity Generation: Uses Stable Diffusion XL (via Hugging Face) to generate high-quality images from the approved text.
+ 
+ 2. Style Lab (Image Input Workflow) Visual Analysis: Leverages Cohere Command A Vision to reverse-engineer an uploaded image's objects, color palette, and artistic style.Variation Generation: Construct new prompts based on the visual analysis to create unique stylistic variations.
+ 
+ Tech Stack Frontend: React.jsStyling: Tailwind CSS / Custom CSS (Clean Tech Aesthetic)
+ 
+ NLP/Vision APIs: Cohere (Command R7B & Command A Vision) 
+ 
+ Image Generation API: Hugging Face (Stable Diffusion XL) 
+ 
+ Deployment: Vercel / Netlify 
+ 
+Getting StartedPrerequisitesNode.js (v18+)npm or yarnInstallationClone the repository:Bashgit clone https://github.com/Dharshu-14/PearMedia.git
 
-## Available Scripts
+cd PearMedia
+Install dependencies:Bashnpm install
+Configure Environment Variables:
+Create a .env file in the root directory and add your API keys:
+Code snippet:
+REACT_APP_COHERE_KEY=your_cohere_trial_key
+REACT_APP_HF_KEY=your_hugging_face_access_token
+Run the application:Bashnpm start
 
-In the project directory, you can run:
+Project Flow Input: User enters text or uploads an image.Process: APIs analyze the input to engineer a better prompt or extract visual metadata.
 
-### `npm start`
+Approval: (Text Workflow) User edits the descriptive prompt for precision.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Output: The final AI-generated result is displayed in the results section.📸
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deliverables:
+Live Demo: [Insert Your Vercel/Netlify Link Here] 
+Execution Video: [Insert Your Loom/Drive Link Here] 
